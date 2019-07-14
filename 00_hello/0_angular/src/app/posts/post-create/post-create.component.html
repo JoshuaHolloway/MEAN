@@ -1,0 +1,21 @@
+<textarea rows="6" [(ngModel)]="enteredValue"></textarea>
+<!-- [...]="..." directly targets the value property of the underlying object {...} and binds the value "..." to it -->
+
+<hr />
+
+<!-- Click-Listener achieved via Event-Binding -->
+<!-- Event Binding: Allows us to listen to events in a declarative way. -->
+<!-- i.e. Instead of using javascript and selecting the element from the DOM via querySelector and addEventListener
+     programatically, we instead bind our event (onAddPost()) to the element in the HTML. -->
+<button (click)="onAddPost()">Save Post</button>
+
+<!-- After Event-Binding, we need to pass in the data from the form into the Listener Function -->
+<button (click)="onAddPost(postInput)">Save Post</button>
+
+<!-- Retrienve data from JS via event hooks. Here, we use strng interpolation via {{...}} -->
+<p>{{ newPost }}</p>
+
+<!-- To output data to HTML from JS, we will use a combination of:
+      -String interpolation
+      -Property Binding
+ -->
