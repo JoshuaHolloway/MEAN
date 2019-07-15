@@ -1,5 +1,9 @@
-<textarea rows="6" [(ngModel)]="enteredValue"></textarea>
+<!-- <textarea rows="6" [value]="enteredValue"></textarea> -->
 <!-- [...]="..." directly targets the value property of the underlying object {...} and binds the value "..." to it -->
+
+<!-- Two-way-binding:  -->
+<textarea rows="6" [(ngModel)]="enteredValue"></textarea>
+<!-- ngModel is a directive that listens to user input an emits tha0t data to us and also outputs new data in the text area -->
 
 <hr />
 
@@ -10,7 +14,7 @@
 <button (click)="onAddPost()">Save Post</button>
 
 <!-- After Event-Binding, we need to pass in the data from the form into the Listener Function -->
-<button (click)="onAddPost(postInput)">Save Post</button>
+<!-- <button (click)="onAddPost(postInput)">Save Post</button> -->
 
 <!-- Retrienve data from JS via event hooks. Here, we use strng interpolation via {{...}} -->
 <p>{{ newPost }}</p>

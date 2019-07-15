@@ -17,14 +17,15 @@ import { Component } from '@angular/core';
 })
 export class PostCreateComponent {
   enteredValue = 'Initial value for enteredValue :)';
-  newPost = 'NO CONTENT';
+  newPost = 'Initial value for newPost';
 
-  // onAddPost(postInput: HTMLTextAreaElement) {
-  //   console.log(postInput);
-  //   this.newPost = this.enteredValue;
-  // }
   onAddPost() {
     // alert('Post added!');
-    this.newPost = "The users's post";
+    // this.newPost = "The users's post";
+    this.newPost = this.enteredValue;
   }
+  // onAddPost(postInput: HTMLTextAreaElement) {
+  //   console.dir(postInput);
+  //   this.newPost = this.enteredValue;
+  // }
 }
