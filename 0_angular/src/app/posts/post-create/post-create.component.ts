@@ -9,18 +9,16 @@ import { Component } from '@angular/core';
 @Component({
   // -The Componenent decorator takes some configuration in the form
   //  of a JSON object, which we pass to it via ({...})
-  // -
   selector: 'app-post-create', // -The selector allows us to use the component
-  templateUrl: './post-create.component.html' // Pass .html file
-  // -You could pass in html to the template like follows:
-  //  template: "<h1>stuff</h1>"
+  templateUrl: './post-create.component.html', // Pass .html file
+  styleUrls: ['./post-create.component.css']
 })
 export class PostCreateComponent {
   enteredValue = 'Initial value for enteredValue :)';
   newPost = 'Initial value for newPost';
 
   onAddPost() {
-    // alert('Post added!');
+    alert('Post added!');
     // this.newPost = "The users's post";
     this.newPost = this.enteredValue;
   }
