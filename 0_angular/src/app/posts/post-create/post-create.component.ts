@@ -18,12 +18,8 @@ export class PostCreateComponent {
   newPost = 'Initial value for newPost';
 
   onAddPost() {
-    alert('Post added!');
+    // alert('Post added!');
     // this.newPost = "The users's post";
     this.newPost = this.enteredValue;
   }
-  // onAddPost(postInput: HTMLTextAreaElement) {
-  //   console.dir(postInput);
-  //   this.newPost = this.enteredValue;
-  // }
 }
