@@ -5,7 +5,8 @@ import { FormsModule } from '@angular/forms';
 import {
   MatInputModule,
   MatCardModule,
-  MatButtonModule
+  MatButtonModule,
+  MatToolbarModule
 } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,11 +14,13 @@ import { AppComponent } from './app.component';
 
 // Import a reference to the PostCreateComponent class we created
 import { PostCreateComponent } from './posts/post-create/post-create.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent, // Register AppComponent with angular
-    PostCreateComponent // Add the PostCreateComponent classzz
+    PostCreateComponent, // Add the PostCreateComponent class
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ import { PostCreateComponent } from './posts/post-create/post-create.component';
     BrowserAnimationsModule,
     MatInputModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent] // Allow the component's selector to be used in index.html
