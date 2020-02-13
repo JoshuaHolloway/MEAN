@@ -1,0 +1,19 @@
+<h2>post-create.component.html</h2>
+
+<!-- Property-Binding -->
+<textarea name="" id="" cols="10" rows="6" [value]="newPost" #postInput>{{newPost}}</textarea>
+
+<!-- Event-Binding -->
+<button (click)="onAddPost(postInput)">Save Post</button>
+
+<h1>{{newPost}}</h1>
+
+<hr>
+
+<!-- Two-Way Data-Binding -->
+<textarea name="" id="" cols="10" rows="6" [(ngModel)]="enteredValue"></textarea>
+
+<h1>{{enteredValue}}</h1>
+
+<!-- Press save-post button to grab value from form and print below -->
+<h2>{{newPost2}}</h2>
