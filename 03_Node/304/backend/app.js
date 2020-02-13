@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 
-
 app.use('/api/posts', (req, res, next) => {
     console.log('/posts in app.js');
     const posts = [
@@ -28,6 +27,5 @@ app.use((req, res, next) => {
     console.log('Function in app.js');
     res.send('Hello from express!');
 });
-
 
 module.exports = app;
