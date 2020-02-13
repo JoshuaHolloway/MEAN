@@ -1,15 +1,13 @@
 <h2>post-create.component.html</h2>
 
-
-
 <!-- Two-Way Data-Binding -->
 <mat-card>
     <mat-form-field>
         <textarea matInput name="" id="" cols="10" rows="6" [(ngModel)]="enteredValue"></textarea>
     </mat-form-field>
-    <button (click)="onAddPost()">Save Post</button>
+    <button mat-raised-button color="primary" (click)="onAddPost()">
+        Save Post</button>
 </mat-card>
-
 
 <h1>{{enteredValue}}</h1>
 
