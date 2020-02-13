@@ -1,0 +1,11 @@
+<h2>post-create.component.html</h2>
+
+<!-- Property-Binding -->
+<textarea name="" id="" cols="10" rows="6" [value]="newPost" #postInput>{{newPost}}</textarea>
+<hr>
+
+<!-- Event-Binding -->
+<button (click)="onAddPost(postInput)">Save Post</button>
+
+<!-- String-Interpolation -->
+<h1>{{newPost}}</h1>
