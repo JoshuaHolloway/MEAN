@@ -1,0 +1,15 @@
+<mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile style="background: #B1D9E5;">1</mat-grid-tile>
+    <mat-grid-tile style="background: #98EF94;">2</mat-grid-tile>
+    <mat-grid-tile style="background: #FBB3C1;">3</mat-grid-tile>
+    <mat-grid-tile style="background: #DBBDF0">4</mat-grid-tile>
+</mat-grid-list>
+
+<hr>
+
+<mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
+        [style.background]="tile.color">
+        {{tile.text}}
+    </mat-grid-tile>
+</mat-grid-list>
