@@ -1,5 +1,8 @@
 import { Component, Input } from '@angular/core';
 
+// [211]
+import { Post } from '../post.model'; // .ts
+
 @Component({
     selector: 'app-post-list',
     templateUrl: './post-list.component.html',
@@ -12,11 +15,14 @@ export class PostListComponent {
     //     { title: 'Third Post', content: 'This is the 3rd post\'s content', }
     // ];
 
-    @Input() posts = [];
+    // [211]
+    //@Input() posts = [];
     // -We now need to make the posts property bindable from outside
     //  via property binding.
     // -@Input() allows us to bind to posts from the outside.
     // -By from the outside, we mean from the parent component.
     // -The parent is app.component.html
 
+    // [211]
+    @Input() posts: Post[] = [];
 }
