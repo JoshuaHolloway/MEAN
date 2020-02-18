@@ -1,0 +1,24 @@
+<app-header></app-header>
+
+<main>
+    <app-post-create (postCreated)="onPostAdded($event)"></app-post-create>
+    <!-- $event gives us access to the data 
+    that we emitted -->
+
+    <app-post-list [posts]="storedPosts"></app-post-list>
+    <!-- storedPosts (from app.component.ts)
+    ->
+    posts (in post-list.component.ts) -->
+
+
+    <!-- Here is what we are doing: -->
+    <!-- 1. Listening to the postCreated event in app.component.html and adding the post in onPostAdded() in post-create.component.ts -->
+    <!-- 2. The post is being added to the storedPosts array in post-list.comonent.ts from the app-post-list component in
+    this file -->
+
+</main>
+
+
+<hr>
+
+<app-grid></app-grid>
