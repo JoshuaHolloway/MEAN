@@ -9,16 +9,22 @@
         <mat-form-field>
             <!-- [212]: Add name attribute and ngModel-keyword attribute -->
             <!-- <input matInput type="text" [(ngModel)]=enteredTitle> -->
-            <input matInput type="text" name="title_josh" ngModel>
+            <input matInput type="text" name="title_josh" ngModel required minlength="3" #title_josh__="ngModel">
             <!-- ngModel keyword here without any bindings will 
                 register this input as a controll to the 
                 behind the scene form -->
+            <!-- required validator: Angular runs JS logic behind the scenes for form validation -->
+            <!-- ngModel is the data managed behind the scenes -->
+            <!-- #title creates a local reference to ngModel to be used in form-validation -->
+            <mat-error *ngIf="title_josh__.invalid">Please enter a post title</mat-error>
         </mat-form-field>
 
         <mat-form-field>
             <!-- [212]: Add name attribute and ngModel-keyword attribute -->
             <!-- <textarea matInput name="" id="" cols="10" rows="6" [(ngModel)]="enteredContent"></textarea> -->
-            <textarea matInput name="content_josh" id="" cols="10" rows="6" ngModel></textarea>
+            <textarea matInput name="content_josh" id="" cols="10" rows="6" ngModel required
+                #content_josh__="ngModel"></textarea>
+            <mat-error *ngIf="content_josh__.invalid">Please enter a post title</mat-error>
         </mat-form-field>
         <!-- [212] -->
         <!-- <button mat-raised-button color="primary" (click)="onAddPost()">

@@ -39,6 +39,12 @@ export class PostCreateComponent {
     // onAddPost(): void {
     onAddPost(form: NgForm): void {
 
+        // [212]: Add form validation: 
+        //  -Don't submit invalid form
+        if (form.invalid) {
+            return;
+        }
+
         // [211]
         // const post = {
         //     title: this.enteredTitle,
